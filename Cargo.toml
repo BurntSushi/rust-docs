@@ -1,0 +1,19 @@
+[package]
+name = "docs"
+version = "0.1.0"
+authors = ["Andrew Gallant <jamslam@gmail.com>"]
+description = """
+A meta package that provides documentation for burntsushi's packages.
+"""
+documentation = "http://burntsushi.net/rustdoc/docs/"
+homepage = "https://github.com/BurntSushi"
+readme = "README.md"
+keywords = ["csv", "tsv", "slice", "command"]
+license = "Unlicense"
+
+[dependencies]
+csv = "*"
+streaming-stats = "*"
+tabwriter = "*"
+docopt = "*"
+quickcheck = "*"

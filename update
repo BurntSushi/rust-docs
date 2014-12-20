@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+cargo update
+cargo doc
+in-dir ./target/doc fix-perms
+rscp ./target/doc/* gopher:~/www/burntsushi.net/rustdoc/
+
