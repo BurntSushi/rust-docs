@@ -4,6 +4,7 @@ set -e
 
 cargo update
 cargo doc
+python2 patch-index.py
 in-dir ./target/doc fix-perms
 rscp ./target/doc/* gopher:~/www/burntsushi.net/rustdoc/
 

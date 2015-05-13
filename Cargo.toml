@@ -2,18 +2,20 @@
 name = "docs"
 version = "0.1.0"
 authors = ["Andrew Gallant <jamslam@gmail.com>"]
-description = """
-A meta package that provides documentation for burntsushi's packages.
-"""
+description = "A meta package for burntsushi's crate docs."
 documentation = "http://burntsushi.net/rustdoc/docs/"
 homepage = "https://github.com/BurntSushi"
 readme = "README.md"
-keywords = ["csv", "tsv", "slice", "command"]
-license = "Unlicense"
+keywords = ["burntsushi"]
+license = "Unlicense/MIT"
 
 [dependencies]
+byteorder = "*"
+cbor = "*"
 csv = "*"
-streaming-stats = "*"
-tabwriter = "*"
 docopt = "*"
 quickcheck = "*"
+regex = "*"
+streaming-stats = "*"
+suffix = "*"
+tabwriter = "*"
