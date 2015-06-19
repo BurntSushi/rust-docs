@@ -10,12 +10,15 @@ keywords = ["burntsushi"]
 license = "Unlicense/MIT"
 
 [dependencies]
+aho-corasick = "*"
 byteorder = "*"
 cbor = "*"
 csv = "*"
 docopt = "*"
+memchr = "*"
 quickcheck = "*"
 regex = "*"
+regex-syntax = "*"
 streaming-stats = "*"
 suffix = "*"
 tabwriter = "*"

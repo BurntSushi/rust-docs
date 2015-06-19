@@ -8,6 +8,7 @@ SEARCH_INDEX_PATH = path.join('target', 'doc', 'search-index.js')
 DEPS = [
     'stats', 'tabwriter', 'cbor', 'quickcheck', 'regex', 'byteorder',
     'suffix', 'csv', 'docopt',
+    'regex_syntax', 'memchr', 'aho-corasick',
 ]
 
 sidx = list(map(unicode.strip,
@@ -17,4 +18,3 @@ for line in sidx:
     m = re.search(r"^searchIndex\['(\w+)'\]", line)
     if not m or m.group(1) in DEPS:
         print(line, file=new_idx)
-
