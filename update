@@ -2,7 +2,9 @@
 
 set -e
 
-cargo update
+if [ -r Cargo.lock ]; then
+  cargo update
+fi
 cargo doc
 python2 patch-index.py
 in-dir ./target/doc fix-perms

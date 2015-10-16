@@ -8,7 +8,11 @@ SEARCH_INDEX_PATH = path.join('target', 'doc', 'search-index.js')
 DEPS = [
     'stats', 'tabwriter', 'cbor', 'quickcheck', 'regex', 'byteorder',
     'suffix', 'csv', 'docopt',
-    'regex_syntax', 'memchr', 'aho-corasick',
+    'regex_syntax', 'memchr', 'aho_corasick',
+    'chan', 'chan_signal',
+    'walkdir',
+    'utf8_ranges',
+    'fst',
 ]
 
 sidx = list(map(unicode.strip,
