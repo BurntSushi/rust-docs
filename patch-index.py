@@ -13,12 +13,13 @@ DEPS = [
     'walkdir',
     'utf8_ranges',
     'fst',
+    'mempool',
 ]
 
 sidx = list(map(unicode.strip,
                 codecs.open(SEARCH_INDEX_PATH, encoding='utf-8')))
 new_idx = codecs.open(SEARCH_INDEX_PATH, 'w+', encoding='utf-8')
 for line in sidx:
-    m = re.search(r"^searchIndex\['(\w+)'\]", line)
+    m = re.search(r"^searchIndex\[\"(\w+)\"\]", line)
     if not m or m.group(1) in DEPS:
         print(line, file=new_idx)
